@@ -5,11 +5,11 @@ int custom_menu(const char*title,const char*options[],int num_op)
 {
     int choice;
     printf("%s\n",title);
-    for (int i = 0; i < num_op; i++){
-        printf("%d. %s\n", i + 1, options[i]);
+    for (int i=0;i<num_op;i++){
+        printf("%d. %s\n",i+1,options[i]);
     }
     printf("Please select a number between 1 and %d: ",num_op);
-    scanf("%d", &choice);
+    scanf("%d",&choice);
     while (!(choice>=1 && choice<=num_op)){
         printf("Invalid choice, please try again (must be between 1 and %d): ", num_op);
         scanf("%d",&choice);
